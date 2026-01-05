@@ -6,10 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventoController;
 
 
-//Route::get('/user', function (Request $request) {
-//    return $request->user();
-//})->middleware('auth:api');
-
 /**
  * Rutas para el recurso Evento
  */
