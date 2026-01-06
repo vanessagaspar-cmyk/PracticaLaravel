@@ -104,10 +104,10 @@ class EventoController extends Controller
     /**
      * Actualizar el recurso especificado en el almacenamiento.
      */
-    public function update(Request $request, Evento $id)
+    public function update(Request $request, $id)
     {
         //Recuperar el recurso especificado
-        $evento = Evento::find($id);
+        /**$evento = Evento::find($id);
 
         //Si el recurso no se pudo recuperar, retornar un mensaje de error
         if (!$evento){
@@ -117,6 +117,7 @@ class EventoController extends Controller
             ];
             return response()->json($respuesta, 404);
         }
+        */
 
         //Validar que la petición contenga todos los datos necesarios
         $validator = Validator::make($request->all(),[
