@@ -117,7 +117,7 @@ class EventoController extends Controller
             ];
             return response()->json($respuesta, 404);
         }
-        */
+        
 
         //Validar que la petición contenga todos los datos necesarios
         $validator = Validator::make($request->all(),[
@@ -136,6 +136,8 @@ class EventoController extends Controller
             ];            
             return response()->json($respuesta, 400);
         }  
+        */
+        $evento = Evento::find($id);
         
         //Actualizar el recursos con los datos de la petición
         $evento->titulo= $request->titulo;
