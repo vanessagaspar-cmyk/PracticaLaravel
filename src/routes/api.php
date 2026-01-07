@@ -2,9 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//Agregar el controlador EventoController
 use App\Http\Controllers\EventoController;
-
+use App\Http\Controllers\PonentesController;
 
 /**
  * Rutas para el recurso Evento
@@ -24,3 +23,22 @@ Route::put('/eventos/{id}',[EventoController::class,'update']);
 
 //Eliminar un evento específico
 Route::delete('/eventos/{id}',[EventoController::class,'destroy']);
+
+/**
+ * Rutas para el recurso Ponentes
+ */
+
+//Recuperar todos los ponentes
+Route::get('/ponentes',[PonentesController::class,'index']);    
+
+//Almacenar un ponente nuevo
+Route::post('/ponentes',[PonentesController::class,'store']);
+
+//Recuperar un ponente específico
+Route::get('/ponentes/{id}',[PonentesController::class,'show']);
+
+//Actualizar un ponente específico
+Route::put('/ponentes/{id}',[PonentesController::class,'update']);
+
+//Eliminar un ponente específico
+Route::delete('/ponentes/{id}',[PonentesController::class,'destroy']);
